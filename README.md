@@ -17,11 +17,11 @@ and keep the tools they need up to date. For Windows and Linux.
 </p>
 
 <p>
-<a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.2-beta/NEXD-0.0.2-beta-windows-setup.exe"><img src=".github/readme/download-windows.svg" height="56" alt="Download NEXD 0.0.2-beta for Windows"></a>&nbsp;&nbsp;
-<a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.2-beta/NEXD-0.0.2-beta-linux-x64.tar.gz"><img src=".github/readme/download-linux.svg" height="56" alt="Download NEXD 0.0.2-beta for Linux"></a>
+<a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.3-beta/NEXD-0.0.3-beta-windows-setup.exe"><img src=".github/readme/download-windows.svg" height="56" alt="Download NEXD 0.0.3-beta for Windows"></a>&nbsp;&nbsp;
+<a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.3-beta/NEXD-0.0.3-beta-linux-x64.tar.gz"><img src=".github/readme/download-linux.svg" height="56" alt="Download NEXD 0.0.3-beta for Linux"></a>
 </p>
 
-<p><sub>Version <b>0.0.2-beta</b> (beta), 12 November 2026 &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases/tag/v0.0.2-beta">Release notes</a> &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases">All versions</a> &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.2-beta/SHA256SUMS.txt">Checksums</a></sub></p>
+<p><sub>Version <b>0.0.3-beta</b> (beta), 13 November 2026 &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases/tag/v0.0.3-beta">Release notes</a> &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases">All versions</a> &nbsp;·&nbsp; <a href="https://github.com/B3nd4b0ss/NEXD/releases/download/v0.0.3-beta/SHA256SUMS.txt">Checksums</a></sub></p>
 
 </div>
 
@@ -100,9 +100,9 @@ Nothing leaves your computer except what you ask for, like pushing to Git. Token
 
 Download the build for your system with the buttons at the top, or from the [releases](https://github.com/B3nd4b0ss/NEXD/releases).
 
-**Windows 10 and 11.** Run `NEXD-0.0.2-beta-windows-setup.exe`. It installs for your user only (no administrator rights) in `%LOCALAPPDATA%\Programs\NEXD`. The builds are not code-signed yet, so SmartScreen asks once: **More info → Run anyway**.
+**Windows 10 and 11.** Run `NEXD-0.0.3-beta-windows-setup.exe`. It installs for your user only (no administrator rights) in `%LOCALAPPDATA%\Programs\NEXD`. The builds are not code-signed yet, so SmartScreen asks once: **More info → Run anyway**.
 
-**Linux (x64, Ubuntu 22.04 or newer).** Unpack `NEXD-0.0.2-beta-linux-x64.tar.gz` where you want to keep it and run `./install-launcher.sh` once, which adds NEXD to the application menu. On Debian and Ubuntu it needs:
+**Linux (x64, Ubuntu 22.04 or newer).** Unpack `NEXD-0.0.3-beta-linux-x64.tar.gz` where you want to keep it and run `./install-launcher.sh` once, which adds NEXD to the application menu. On Debian and Ubuntu it needs:
 
 ```bash
 sudo apt install libgtk-3-0 libayatana-appindicator3-1 libsecret-tools libglib2.0-bin xdg-utils
@@ -119,6 +119,18 @@ NEXD looks for a new release when it starts and every six hours, and installs it
 ## What's new
 
 <details open>
+<summary><b>0.0.3-beta</b> &nbsp;·&nbsp; 13 November 2026 &nbsp;·&nbsp; beta</summary>
+
+- Keyboard shortcuts work again after the keyboard focus went to nothing in particular: after setting a shortcut in Settings, or when what had the focus went away while NEXD was in the background. A Shift, Alt or Win key whose release Windows did not pass on (Alt+Tab, Win+Shift+S) no longer stops them either.
+- Projects: "Link with the other … projects" on a project in a folder links the folder's projects into one again. It did nothing.
+- Dependencies: also checks Dart and Flutter (pub), Rust (Cargo), .NET (NuGet, with known vulnerabilities), PHP (Composer, with known vulnerabilities), Ruby (Bundler), Maven and Deno projects. Ruby and Deno projects get maintenance tasks to install, check and update.
+- New project: with a new GitHub repository, NEXD checks first that GitHub still accepts your sign-in, and creates nothing when it does not. A project whose creation fails or is stopped no longer leaves its folder behind.
+- Settings → GitHub: a sign-in that was revoked or deleted on GitHub says so, with a way to sign in again. A token found in the keychain without its account name (after reinstalling) gets the name from GitHub instead of showing "Connected as @".
+
+<sub><a href="https://github.com/B3nd4b0ss/NEXD/releases/tag/v0.0.3-beta">Downloads and checksums of 0.0.3-beta</a></sub>
+</details>
+
+<details>
 <summary><b>0.0.2-beta</b> &nbsp;·&nbsp; 12 November 2026 &nbsp;·&nbsp; beta</summary>
 
 - Windows: typing into a terminal works again. Letters and other characters did not arrive, only keys like Enter, Backspace and the arrows.
